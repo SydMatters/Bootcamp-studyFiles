@@ -202,9 +202,18 @@ main > * {
     list-style: none;
 }
 
-@media(max-width: 850px){
+@media(max-width: 914px){
     .container{
         grid-template-columns: 1fr;
     }
+
+    .header-searchBar{
+        width: 80%;
+        margin: auto;
+    }
+    .header-searchBar-input{
+        padding: 0 auto 0 15px;
+    }
+
 }
 
