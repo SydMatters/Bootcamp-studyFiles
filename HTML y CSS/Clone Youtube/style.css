@@ -73,7 +73,8 @@ body {
 
 
 .container {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto;
 }
 
 main {
@@ -150,6 +151,7 @@ main > * {
     flex-direction: column;
     padding-right: 20px;
     margin-right: auto;
+    margin: 20px;
 }
 
 
@@ -200,4 +202,9 @@ main > * {
     list-style: none;
 }
 
+@media(max-width: 850px){
+    .container{
+        grid-template-columns: 1fr;
+    }
+}
 
