@@ -575,177 +575,181 @@
 
 //------------------Objetos----------------
 
-let miPerro = {
-    "nombre" : "Blue",
-    "edad": 0.5,
-    "raza": "Husky",
-    "color": "Blanco"
-};
+// let miPerro = {
+//     "nombre" : "Blue",
+//     "edad": 0.5,
+//     "raza": "Husky",
+//     "color": "Blanco"
+// };
 
-console.log(miPerro);
-console.log("Mi perro se llama " + miPerro.nombre);
-console.log("Mi perro tiene " + miPerro.edad + " años");
-console.log("Mi perro es de raza " + miPerro.raza);
-console.log("Mi perro es de color " + miPerro.color);
+// console.log(miPerro);
+// console.log("Mi perro se llama " + miPerro.nombre);
+// console.log("Mi perro tiene " + miPerro.edad + " años");
+// console.log("Mi perro es de raza " + miPerro.raza);
+// console.log("Mi perro es de color " + miPerro.color);
 
-let miPc ={
-    marca: "ASUS",
-    modelo: "TUF",
-    ram: 16,
-    procesador: "AMD Ryzen 5", //comillas necesarias si el nombre tiene espacios
-};
-//La notacion de corchetes es obligatoria si mi atrubuto tiene espacios
-console.log(miPc)
+// let miPc ={
+//     marca: "ASUS",
+//     modelo: "TUF",
+//     ram: 16,
+//     procesador: "AMD Ryzen 5", //comillas necesarias si el nombre tiene espacios
+// };
+// //La notacion de corchetes es obligatoria si mi atrubuto tiene espacios
+// console.log(miPc)
 
-console.log("Mi pc es una" + miPc["marca"]);
-console.log("Mi pc es un " + miPc["modelo"]);
-console.log("Mi pc tiene " + miPc["ram"] + " GB de RAM");
-console.log("Mi pc tiene un procesador " + miPc["procesador"]);
+// console.log("Mi pc es una" + miPc["marca"]);
+// console.log("Mi pc es un " + miPc["modelo"]);
+// console.log("Mi pc tiene " + miPc["ram"] + " GB de RAM");
+// console.log("Mi pc tiene un procesador " + miPc["procesador"]);
 
-let modeloIndex = 2;
+// let modeloIndex = 2;
 
-console.log(miPc[modeloIndex]);
+// console.log(miPc[modeloIndex]);
 
-//Manipular atributos
-miPc.ram = 32;
-console.log(miPc);
+// //Manipular atributos
+// miPc.ram = 32;
+// console.log(miPc);
 
-var mochila = {
-    "color": "azul",
-    "marca": "Nike",
-    "tamaño": "grande",
-    "material": "tela",
-    "contenido": ["libro", "cuaderno", "lapiz"]
-};
+// var mochila = {
+//     "color": "azul",
+//     "marca": "Nike",
+//     "tamaño": "grande",
+//     "material": "tela",
+//     "contenido": ["libro", "cuaderno", "lapiz"]
+// };
 
-console.log(mochila);
-mochila.contenido.push("borrador");
-console.log(mochila);
+// console.log(mochila);
+// mochila.contenido.push("borrador");
+// console.log(mochila);
 
-//Agregar atributos
-mochila.peso = "1kg";
-mochila["peso"]= "1kg";
-console.log(mochila);
+// //Agregar atributos
+// mochila.peso = "1kg";
+// mochila["peso"]= "1kg";
+// console.log(mochila);
 
-//Eliminar atributos
-delete mochila.peso;
+// //Eliminar atributos
+// delete mochila.peso;
 
-//Verificar propiedades
+// //Verificar propiedades
 
-var miObjeto = {
-    "nombre": "Nicolas",
-    "edad": 25,
-    "estudiante": true
+// var miObjeto = {
+//     "nombre": "Nicolas",
+//     "edad": 25,
+//     "estudiante": true
     
-};
-console.log(miObjeto.hasOwnProperty("nombre")); //true
-console.log(miObjeto.hasOwnProperty("apellido")); //false
+// };
+// console.log(miObjeto.hasOwnProperty("nombre")); //true
+// console.log(miObjeto.hasOwnProperty("apellido")); //false
 
-//Objetos más complejos
+// //Objetos más complejos
 
-var ordenesPizza = [
-    {
-        "tamaño": "mediana",
-        "tipo": "margarita",
-        "precio": 10,
-        "toppings": ["queso", "tomate"],
-        paraLlevar: true
+// var ordenesPizza = [
+//     {
+//         "tamaño": "mediana",
+//         "tipo": "margarita",
+//         "precio": 10,
+//         "toppings": ["queso", "tomate"],
+//         paraLlevar: true
 
-    },
-    {
-        "tamaño": "grande",
-        "tipo": "peperoni",
-        "precio": 15,
-        "toppings": ["queso", "peperoni"],
-        paraLlevar: true
-    }
-];
+//     },
+//     {
+//         "tamaño": "grande",
+//         "tipo": "peperoni",
+//         "precio": 15,
+//         "toppings": ["queso", "peperoni"],
+//         paraLlevar: true
+//     }
+// ];
 
-console.log(ordenesPizza);
+// console.log(ordenesPizza);
 
-console.log(ordenesPizza[0]);
-console.log(ordenesPizza[1]);
+// console.log(ordenesPizza[0]);
+// console.log(ordenesPizza[1]);
 
-console.log(ordenesPizza[0].tamaño);
-console.log(ordenesPizza[1].tipo);
+// console.log(ordenesPizza[0].tamaño);
+// console.log(ordenesPizza[1].tipo);
 
-//Objetos anidados
+// //Objetos anidados
 
-var miReceta = {
-    "nombre": "Tarta de manzana",
-    "porciones": 8,
-    "ingredientes": [
-        {
-            "nombre": "manzanas",
-            "cantidad": 4
-        },
-        {
-            "nombre": "azucar",
-            "cantidad": "1 taza"
-        },
-        {
-            "nombre": "harina",
-            "cantidad": "2 tazas"
-        }
-    ]
-};
+// var miReceta = {
+//     "nombre": "Tarta de manzana",
+//     "porciones": 8,
+//     "ingredientes": [
+//         {
+//             "nombre": "manzanas",
+//             "cantidad": 4
+//         },
+//         {
+//             "nombre": "azucar",
+//             "cantidad": "1 taza"
+//         },
+//         {
+//             "nombre": "harina",
+//             "cantidad": "2 tazas"
+//         }
+//     ]
+// };
 
-console.log(miReceta);
-console.log(miReceta.ingredientes[0]);
-console.log(miReceta.ingredientes[1].nombre);
-console.log(miReceta.ingredientes[1].cantidad); 
+// console.log(miReceta);
+// console.log(miReceta.ingredientes[0]);
+// console.log(miReceta.ingredientes[1].nombre);
+// console.log(miReceta.ingredientes[1].cantidad); 
 
-//Objetos dentro de arrays
-var misFlores = [
-    {
-        tipo:"flores",
-        lista: ["rosas", 
-                "girasoles",
-                "margaritas"]
-    },
-    {
-        tipo:"arboles",
-        lista: ["pino",
-                "roble",
-                "cedro"]
-    }
-]
+// //Objetos dentro de arrays
+// var misFlores = [
+//     {
+//         tipo:"flores",
+//         lista: ["rosas", 
+//                 "girasoles",
+//                 "margaritas"]
+//     },
+//     {
+//         tipo:"arboles",
+//         lista: ["pino",
+//                 "roble",
+//                 "cedro"]
+//     }
+// ]
 
-var primeraFlor = misFlores[0].lista[0];
-var segundaFlor = misFlores[0].lista[1];
-console.log(primeraFlor);
+// var primeraFlor = misFlores[0].lista[0];
+// var segundaFlor = misFlores[0].lista[1];
+// console.log(primeraFlor);
 
-var coleccionDiscos = {
-    7853: {
-        artista: "Queen",
-        album: "A Night at the Opera",
-        canciones: ["Bohemian Rhapsody", "You're my best friend"]
-    },
-    5439: {
-        artista: "The Beatles",
-        album: "Abbey Road",
-        canciones: ["Come Together", "Here Comes the Sun"]
-    }
-};
+// var coleccionDiscos = {
+//     7853: {
+//         artista: "Queen",
+//         album: "A Night at the Opera",
+//         canciones: ["Bohemian Rhapsody", "You're my best friend"]
+//     },
+//     5439: {
+//         artista: "The Beatles",
+//         album: "Abbey Road",
+//         canciones: ["Come Together", "Here Comes the Sun"]
+//     }
+// };
 
-function actualizarDiscos(id, propiedad, valor){
-    if(valor === ""){
-        delete coleccionDiscos[id][propiedad];
-    }
-    else if(propiedad === "canciones" && coleccionDiscos.id.hasOwnProperty("canciones")){
-        coleccionDiscos.id["canciones"] = [];
-        coleccionDiscos.id["canciones"].push(valor);
-    }
-    else if(propiedad ==="canciones" && valor !== ""){
-        coleccionDiscos.id["canciones"].push(valor);
-    }
-    else if(valor !== "" && propiedad !== "canciones"){
-        if(coleccionDiscos.id.hasOwnProperty(propiedad)){
-            coleccionDiscos.id[propiedad] = valor;
-        }
-        else {
-            coleccionDiscos.id[propiedad] = []
-            coleccionDiscos.id[propiedad].push(valor);    
-        }       
-    }
-}
+// function actualizarDiscos(id, propiedad, valor){
+//     if(valor === ""){
+//         delete coleccionDiscos[id][propiedad];
+//     }
+//     else if(propiedad === "canciones" && coleccionDiscos.id.hasOwnProperty("canciones")){
+//         coleccionDiscos.id["canciones"] = [];
+//         coleccionDiscos.id["canciones"].push(valor);
+//     }
+//     else if(propiedad ==="canciones" && valor !== ""){
+//         coleccionDiscos.id["canciones"].push(valor);
+//     }
+//     else if(valor !== "" && propiedad !== "canciones"){
+//         if(coleccionDiscos.id.hasOwnProperty(propiedad)){
+//             coleccionDiscos.id[propiedad] = valor;
+//         }
+//         else {
+//             coleccionDiscos.id[propiedad] = []
+//             coleccionDiscos.id[propiedad].push(valor);    
+//         }       
+//     }
+// }
+
+
+//------------------Ciclos----------------
+
