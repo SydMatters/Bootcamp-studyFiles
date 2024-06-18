@@ -1047,3 +1047,237 @@
 
 //-------------------Spread operator-----------------
 
+// const numeros = [1,2,3,4,5];
+
+// function sumar(a,b,c,d,e){
+//     console.log(a);
+//     console.log(b);
+//     console.log(c);
+//     console.log(d);
+//     console.log(e);
+//     return a + b + c + d + e;
+// }
+
+// console.log(sumar(...numeros));
+
+//------------Sintaxis de desestructuración------------
+
+// const usuario ={
+//     nombre: "Nicolas",
+//     apellido: "Vega",
+//     edad: 25
+// };
+
+// const {nombre, apellido, edad} = usuario;
+
+// console.log(nombre);
+// console.log(apellido);
+// console.log(edad);
+
+// var coodernadas ={
+//     x: 10,
+//     y: 20,
+//     z: 30
+// };
+
+// const {x, y, z} = coodernadas;
+
+// console.log(x);
+// console.log(y);
+// console.log(z);
+
+
+// //Objetos anidados
+
+// const persona = {
+//     johnDoe: {
+//         age: 34,
+//         email: "johnDowe@codecamep.com"
+//     }
+// };
+
+// const {johnDoe: {age : años, email: correo}} = persona;
+
+// console.log(años);
+// console.log(correo);
+
+// const PRONOSTICO_LOCAL={
+//     "ayer": {max: 80, min: 60},
+//     "hoy": {max: 85, min: 65},
+//     "mañana": {max: 90, min: 70}
+// };
+
+// const minimoHoy = PRONOSTICO_LOCAL.hoy.min;    
+
+// const maximaHoy = PRONOSTICO_LOCAL.hoy.max;
+
+// console.log(minimoHoy, maximaHoy);
+
+// const {hoy: {max: maxima, min: minima}} = PRONOSTICO_LOCAL;
+
+// console.log(minima, maxima);
+
+
+// //Arreglos
+
+// var a = 8;
+// var b = 6;
+
+// [b,a] = [a,b];
+
+// console.log("a: " + a);
+// console.log("b: " + b);
+
+// //with rest operator
+// var array
+// [a,b, ...array] = [1,2,3,4,5];
+
+// const arregloInicial = [1,2,3,4,5,6,7,8];
+
+// function removerDos(arreglo){
+//     const [, , , ...nuevoArreglo] = arreglo;
+//     return nuevoArreglo;
+// }
+
+// const arregloFinal = removerDos(arregloInicial);
+// console.log(arregloFinal);
+
+// //objeto como argumaneto
+
+// var nuevoPerfilCliente ={
+//     nombre: "Jane Doe",
+//     edad: 25,
+//     nacionalidad: "Española",
+//     ubicacion: "Madrid"
+// };
+
+// const actualizarPerfil = (info) => {
+//     const {nombre, edad, nacionalidad , ubicacion} = info;
+
+//     console.log(nombre, edad, nacionalidad, ubicacion);  
+// };
+
+// actualizarPerfil(nuevoPerfilCliente);
+
+// const estadisticas = {
+//     max: 56.78,
+//     standard_deviation: 4.34,
+//     median: 34.54,
+//     min: -0.75,
+//     average: 35.85,
+//     moda: 23.87
+// };
+
+// const puntoMedio = ({max,min}) => (max + min) / 2.0;
+
+// console.log(puntoMedio(estadisticas));
+
+//-------------------Template literals-----------------
+
+// /*
+// Caracteristicas: 
+// 1. Se usa el acento invertido en lugar de comillas simples o dobles
+// 2. Pueden contener comillas simples y dobles sin necesidad de escaparlas
+// 3. Las lineas se preservan como se escriben en el codigo
+// 4.Para remplazar una variable se escirbe ${variable}
+// 5- Dentro de ${} se puede escribir cualquier expresion de JavaScript
+// */
+
+// var a=6;
+// console.log(`El valor de a es ${a}`);
+
+// var nombre = "Nicolas";
+// var edad = 25;
+
+// console.log(`Hola, mi nombre es ${nombre} y tengo ${edad} años`);
+
+// var miArreglo = [1,2,3,4,5];
+
+// console.log(`El primer elemento del arreglo es ${miArreglo[0]}`);
+// console.log(`El primer elemento del arreglo es ${JSON.stringify(miArreglo)}`);
+
+//-------------------Metodos-----------------
+
+const crearPersona = (nombre, apellido, edad) => {
+    return {
+        nombre: nombre,
+        apellido: apellido,
+        edad: edad
+    }
+};
+
+const crearPersona1 = (nombre,edad,idioma) => ({nombre,edad,idioma});
+
+console.log(crearPersona("Nicolas", "Vega", 25));
+
+
+const persona = {
+    nombre: "Nicolas",
+    apellido: "Vega",
+    edad: 22,
+    idioma: "Español",
+    presentarse(){
+        return `Hola, mi nombre es ${this.nombre} ${this.apellido} y tengo ${this.edad} años`;
+    }
+};
+console.log(persona.presentarse());
+
+//------------------Clases-----------------
+
+class TrasbordadorEspeacial{
+    constructor(planeta){
+        this.planeta = planeta;
+    }
+}
+
+var zeus = new TrasbordadorEspeacial("Marte");
+
+console.log(zeus.planeta);
+
+var apolo = new TrasbordadorEspeacial("Jupiter");  
+
+console.log(apolo.planeta); 
+
+class Mascota {
+    constructor(nombre, edad){
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+}
+
+var miMascota = new Mascota("Firulais", 5);
+
+console.log(miMascota.nombre);
+console.log(miMascota.edad);
+
+//Getters y Setters
+
+
+class Libro{
+    constructor(titulo, autor){
+        this._titulo = titulo;
+        this._autor = autor;
+    }
+
+    get titulo(){
+        return this._titulo;
+    }
+
+    set titulo(nuevoTitulo){
+        this._titulo = nuevoTitulo;
+    }
+
+    get autor(){
+        return this._autor;
+    }
+
+    set autor(nuevoAutor){
+        this._autor = nuevoAutor;
+    }
+}
+
+const libro = new Libro("El principito", "Antoine de Saint-Exupéry");
+console.log(libro.titulo);
+
+libro.titulo = "El principito 2";
+console.log(libro.titulo);
