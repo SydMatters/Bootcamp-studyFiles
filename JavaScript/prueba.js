@@ -28,7 +28,7 @@
 // console.log(rest);
 
 // var producto = 10 * 10;
-// console.log(producto);  
+// console.log(producto);
 
 // var producto = 10 * 0;
 // console.log(producto);
@@ -74,7 +74,7 @@
 
 
 // librosComprados += 5;
-// console.log(librosComprados);  
+// console.log(librosComprados);
 // librosComprados =- 5;
 
 
@@ -211,7 +211,7 @@
 // /*
 // Arreglo:        [[1, 2, 3],[4, 5, 6],[7, 8, 9]]
 // Posición:           0       1       2
-// Indices internos:0  1  2    0  1  2   0  1  2  
+// Indices internos:0  1  2    0  1  2   0  1  2
 // */
 
 
@@ -260,7 +260,7 @@
 //-----------------------FUNCIONES--------------------
 
 // function mostrarMensaje(){
-//     console.log("Hola Mundo");    
+//     console.log("Hola Mundo");
 // }
 
 // mostrarMensaje();
@@ -299,7 +299,7 @@
 
 // function mostrarMiNombre(){
 //     var miNombre = "Juan";
-//     console.log(miNombre);  
+//     console.log(miNombre);
 // }
 
 // //-----Return-----
@@ -370,7 +370,7 @@
 // console.log(esVerdadero && esFalso);    //AND
 // console.log(esVerdadero || esFalso);    //OR
 // console.log(!esVerdadero);              //NOT
-// console.log(!esFalso);                  
+// console.log(!esFalso);
 //  //Tener en cuenta las tablas de verdad
 
 //------------------Condicionales----------------
@@ -636,7 +636,7 @@
 //     "nombre": "Nicolas",
 //     "edad": 25,
 //     "estudiante": true
-    
+
 // };
 // console.log(miObjeto.hasOwnProperty("nombre")); //true
 // console.log(miObjeto.hasOwnProperty("apellido")); //false
@@ -693,13 +693,13 @@
 // console.log(miReceta);
 // console.log(miReceta.ingredientes[0]);
 // console.log(miReceta.ingredientes[1].nombre);
-// console.log(miReceta.ingredientes[1].cantidad); 
+// console.log(miReceta.ingredientes[1].cantidad);
 
 // //Objetos dentro de arrays
 // var misFlores = [
 //     {
 //         tipo:"flores",
-//         lista: ["rosas", 
+//         lista: ["rosas",
 //                 "girasoles",
 //                 "margaritas"]
 //     },
@@ -745,11 +745,271 @@
 //         }
 //         else {
 //             coleccionDiscos.id[propiedad] = []
-//             coleccionDiscos.id[propiedad].push(valor);    
-//         }       
+//             coleccionDiscos.id[propiedad].push(valor);
+//         }
 //     }
 // }
 
 
 //------------------Ciclos----------------
+
+// var i = 0;
+
+// while(i < 5){
+//     console.log(i);
+//     i++;
+// }
+
+// var miArreglo =[];
+
+// var i;
+// console.log(miArreglo);
+
+// while(i < 5){
+//     miArreglo.push(i);
+//     i++;
+// }
+
+// var Numeros = [1,2,3,4,5,6,7,8,9,10];
+
+// while(Numeros.length > 4){
+//     Numeros.pop();
+// }
+
+// console.log(Numeros);
+
+// //for
+
+// for(var i = 0; i < 5; i++){
+//     console.log(i);
+// }
+
+// var miArreglo = [];
+
+// for(var i = 0; i < 5; i++){
+//     miArreglo.push(i);
+// }
+
+// var numerosImpares = [];
+
+// for(var i = 1; i < 10; i += 2){
+//     numerosImpares.push(i);
+// }
+
+// console.log(numerosImpares);
+
+// for(var i = 15; i > 0; i--){ //hacia atras
+//     console.log(i);
+// }
+
+// //con arreglos
+
+// var miArreglo = [1,2,3,4,5];
+// var suma = 0;
+// for(var i = 0; i < miArreglo.length; i++){
+//     console.log(miArreglo[i]);
+//     suma += miArreglo[i];
+// }
+
+// console.log("La suma es: " + suma);
+
+// var lenguajes = ["JavaScript", "Python", "Java", "C++", "Ruby", "C#"];
+
+// for(var i = 0; i < lenguajes.length; i++){
+//     console.log(lenguajes[i].toUpperCase());
+// }
+
+// function contarImpares (arr){
+//     var conteo = 0;
+//     for(var i = 0; i < arr.length; i++){
+//         if(arr[i] % 2 !== 0){
+//             conteo++;
+//         }
+//     }
+//     return conteo;
+// }
+
+// //for anidados. igual que en otros lenguajes
+//  var matrix = [[1,2,3],[4,5,6],[7,8,9]];
+
+//  for(var i = 0; i < matrix.length; i++){
+//     var arreglo = matrix[i];
+//     console.log(arreglo);
+//     for(var j = 0; j < matrix[i].length; j++){;
+//         console.log(matrix[i][j]);
+//     }
+// }
+
+// //do while, se ejecuta al menos una vez, como en otros lenguajes
+
+// var x = 0;
+
+// do{
+//     console.log(x);
+//     x++;
+// }while(x < 5);
+
+// var contactos = [
+//     {
+//         "nombre": "Juan",
+//         "telefono": 123456,
+//         "apellido": "Perez"
+//         "gustos": ["futbol", "cine", "musica"]
+//     },
+//     {
+//         "nombre": "Maria",
+//         "telefono": 654321,
+//         "apellido": "Gomez",
+//         "gustos": ["tenis", "cine", "musica"]
+//     },
+//     {
+//         "nombre": "Pedro",
+//         "telefono": 456789,
+//         "apellido": "Gonzalez",
+//         "gustos": ["futbol", "cine", "musica"]
+//     }
+// ]
+
+// function buscarContacto(nombre,propiedad){
+//     for(var i = 0; i < contactos.length; i++){
+//         if(contactos[i].nombre === nombre){
+//             return contactos[i][propiedad] || "Propiedad no valida";
+//         }
+//     }
+//     return "Contacto no encontrado";
+// }
+
+//--------Numeros aleatorios------------
+
+// function generarFraccionAleatoria(){
+//     return Math.random();//Numeros con muchos decimales entre 0 y 1
+// }
+
+// function generarNumeroAleatorio(){
+//     return Math.floor(Math.random() * 10);//Numeros enteros entre 0 y 9
+// }
+
+// function generarNumeroAleatorioEntre(min, max){
+//     return Math.floor(Math.random() * (max - min + 1) + min);
+// }
+
+//------------------Funciones parseInt y parseFloat----------------
+
+// var cadena = "10";
+// var cadenaDecimal = "10.5";
+// var entero = parseInt(cadena);
+// var decimal = parseFloat(cadenaDecimal);
+// console.log(parseInt(cadena));
+// console.log(parseInt(cadenaDecimal)); //redondea hacia abajo si es decimal
+// console.log(parseInt("abc"));//NaN
+// console.log(parseFloat(cadenaDecimal));
+// console.log("La suma de los dos es: " + (entero + decimal));
+// //parse con base
+
+// console.log(parseInt("11", 2));//11 en binario es 3 en decimal
+// console.log(parseInt("11", 8));//11 en octal es 9 en decimal
+// console.log(parseInt("11", 16));//11 en hexadecimal es 17 en decimal
+
+//-------------------Operador ternario----------------
+
+// function esMayorDeEdad(edad){
+//     return edad >= 18 ? "Es mayor de edad" : "Es menor de edad";
+// }
+
+// function retornarMayor(a,b){
+//     console.log(a > b ? a : b);
+// }
+
+//-------------------Multiple ternary----------------
+
+// function compararNumeros(a,b){
+//     return a === b ? "Son iguales" 
+//     : a > b ? "El primer número es mayor" 
+//     : "El segundo número es mayor";
+// }
+
+//-------------------var vs let----------------
+// var campista = "Juan";
+// var campista = "Pedro";
+
+// let campistaLet = "Juan";
+// //let campistaLet = "Pedro"; //Error, no se puede redeclarar
+// campistaLet = "Pedro"; //Se puede modificar
+// console.log(campista);
+
+// //var es global, let es local
+
+// var miVariable = "global";
+
+// console.log(miVariable);
+
+// function miFuncion(){
+//     var local = "local";
+//     console.log(miVariable);
+//     console.log(local);
+// }
+
+// //console.log(local); //Error, no se puede acceder a una variable local
+// for(var i = 0; i < 5; i++){
+//     console.log(i);
+// }
+
+// console.log(i); //5
+
+// for(let i = 0; i < 5; i++){
+//     console.log(i);
+// }
+
+// console.log(i); //Error, i no esta definido
+
+// var mostrarColor =true;
+
+// if(mostrarColor){
+//     let color = "rojo";
+//     console.log(color);
+// }
+
+// console.log(color); //Error, color no esta definido
+
+//-------------------const----------------
+
+// //variable constante que no se puede modificar después de su declaración.
+// const PI = 3.1416;
+// //Se escriven con uppercase y snake_case
+// console.log(PI);
+
+// //PI = 3.14; //Error, no se puede modificar
+
+// function calcularArea(radio){
+//     return PI * radio * radio;
+// }
+
+//-------------------Mutar arreglo----------------
+
+// const MI_ARREGLO = [1,2,3,4,5];
+
+// MI_ARREGLO= 10; //Error, no se puede modificar
+
+// MI_ARREGLO[0] = 10; //Se puede modificar
+
+// console.log(MI_ARREGLO);
+
+//-------------------OBJETO INMUTABLE-----------------
+// let colores = {
+//     rojo: "#FF0000",
+//     verde: "#00FF00",
+//     azul: "#0000FF"
+// };
+
+// Object.freeze(colores); 
+
+// colores.amarillo = "#FFFF00"; //No se puede agregar, read-only
+// delete colores.rojo; //No se puede eliminar, read-only
+
+//-------------------FUNCIONES FLECHA-----------------
+//Funciones anonimas, no tienen nombre especifico
+
+const fecha = function(){
+    return new Date();
+}
 
