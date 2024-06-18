@@ -1281,3 +1281,5 @@ console.log(libro.titulo);
 
 libro.titulo = "El principito 2";
 console.log(libro.titulo);
+
+console.log(`Hola mi nombre es Nicolas y leo ${libro.titulo} de ${libro.autor}`);
