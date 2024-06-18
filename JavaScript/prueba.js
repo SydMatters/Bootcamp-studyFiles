@@ -285,19 +285,146 @@
 
 //--------------------Variable global y local----------------
 
-var miVariableGlobal = "Soy una variable global";
+// var miVariableGlobal = "Soy una variable global";
 
-console.log(miVariableGlobal);
+// console.log(miVariableGlobal);
 
-function miFuncion(){
-    var miVariableLocal = "Soy una variable local";
-    console.log(miVariableLocal);
-    console.log(miVariableGlobal);
+// function miFuncion(){
+//     var miVariableLocal = "Soy una variable local";
+//     console.log(miVariableLocal);
+//     console.log(miVariableGlobal);
+// }
+
+// var miNombre = "Nicolas";
+
+// function mostrarMiNombre(){
+//     var miNombre = "Juan";
+//     console.log(miNombre);  
+// }
+
+// //-----Return-----
+
+// function sumarR(a,b){
+//     return a + b;
+// }
+
+// function sumar(a,b){
+//     console.log(a + b);
+// }
+
+// let resultado = sumarR(10,20);
+// console.log(resultado);
+// //Las funciones retornan un valor predefinidio UNDEFINED
+// resultado = sumar(10,20);
+// console.log(resultado);
+
+
+// //Proyecto
+
+// function inPila(arr, element){
+//     arr.unshift(element);
+// }
+
+// function outPila(arr){
+//     return arr.shift();
+// }
+
+// let pila = [1,2,3,4,5];
+
+// inPila(pila, 6);
+// console.log(JSON.stringify(pila));
+
+// let elemento = outPila(pila);
+// console.log(elemento);
+// console.log(JSON.stringify(pila));
+
+//------------------Booleanos---------------
+
+// let esVerdadero = true;//True es invalido en JavaScript, solo es valido true
+// let esFalso = false;
+
+// console.log(esVerdadero);
+// console.log(esFalso);
+
+// console.log(5 == 5);
+// console.log(5 == 6); //Compara elementos sin importar el tipo
+// console.log(5 != 6);
+// console.log(5 != 5);
+// console.log(5 === 5);
+// console.log(5 === "5"); //Compara elementos con el mismo tipo
+// console.log(5 !== "5");
+// //Nota: == y === son operadores de igualdad, != y !== son operadores de desigualdad
+// //Nota: == y != son operadores de igualdad débil, === y !== son operadores de igualdad fuerte
+// //Nota: no comparar arrays con == o ===, ya que se comparan como objetos, no comparan sus elementos.
+
+// console.log(5 > 3);
+// console.log(5 < 3);
+// console.log(5 >= 5);
+// console.log(5 <= 5);
+
+//------------------Operadores logicos----------------
+
+// let esVerdadero = true;
+// let esFalso = false;
+
+// console.log(esVerdadero && esFalso);    //AND
+// console.log(esVerdadero || esFalso);    //OR
+// console.log(!esVerdadero);              //NOT
+// console.log(!esFalso);                  
+//  //Tener en cuenta las tablas de verdad
+
+//------------------Condicionales----------------
+
+//Lo regular en otros lenguajes se usa if, else if, else
+
+let esVerdadero = true;
+
+if(esVerdadero){
+    console.log("Es verdadero");
 }
 
-var miNombre = "Nicolas";
+let esFalso = false;
 
-function mostrarMiNombre(){
-    var miNombre = "Juan";
-    console.log(miNombre);  
+if(esFalso){
+    console.log("Es verdadero");
 }
+
+let x = 10;
+
+if(x > 5 && x < 20){
+    console.log("Es mayor a 5");
+}
+
+let estacion = "Invierno";
+
+if(estacion === "Primavera"){
+    console.log("Flores");
+}else if(estacion === "Invierno"){
+    console.log("Nieve");
+}
+
+function esPar(numero){
+    if(numero % 2 === 0){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+console.log(esPar(10));
+
+function interpretarIMC(imc){
+    if(imc < 18.5){
+        return "Bajo peso";
+    }else if(imc >= 18.5 && imc <= 24.9){
+        return "Normal";
+    }else if(imc >= 25 && imc <= 29.9){
+        return "Sobrepeso";
+    }else{
+        return "Obesidad";
+    }
+}
+
+console.log(interpretarIMC(20));
+console.log(interpretarIMC(30));
+console.log(interpretarIMC(15));
