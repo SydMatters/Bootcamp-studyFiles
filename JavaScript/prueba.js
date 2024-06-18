@@ -173,86 +173,131 @@
 
 //-------------------Arrays----------------
 
-var miArreglo = ["Nicolas", 25, true, "Vega"];
-console.log(miArreglo);
+// var miArreglo = ["Nicolas", 25, true, "Vega"];
+// console.log(miArreglo);
 
-var estudiantes = ["Maria", "Sergio", "Rosa", "Daniel"];
-console.log(estudiantes);
+// var estudiantes = ["Maria", "Sergio", "Rosa", "Daniel"];
+// console.log(estudiantes);
 
-//Anidados
+// //Anidados
 
-var listaDeEstudiantes=[["Nora",97],["Sergio",89],["Rosa",95],["Daniel",92]];
-console.log(listaDeEstudiantes);
+// var listaDeEstudiantes=[["Nora",97],["Sergio",89],["Rosa",95],["Daniel",92]];
+// console.log(listaDeEstudiantes);
 
-//Acceder a los elementos
-/*
-Arreglo: [Maria, Sergio, Rosa, Daniel]
-Posición:  0       1       2       3
-*/
-console.log(estudiantes[0]);
+// //Acceder a los elementos
+// /*
+// Arreglo: [Maria, Sergio, Rosa, Daniel]
+// Posición:  0       1       2       3
+// */
+// console.log(estudiantes[0]);
 
-//Modificar elementos
-var miArreglo= [10, 20, 30, 40];
-miArreglo[0] = 100;
+// //Modificar elementos
+// var miArreglo= [10, 20, 30, 40];
+// miArreglo[0] = 100;
 
-console.log(miArreglo);
+// console.log(miArreglo);
 
-miArreglo[1] = "Hola";
+// miArreglo[1] = "Hola";
 
-miArreglo[2] = [1,2,3];
+// miArreglo[2] = [1,2,3];
 
-console.log(miArreglo);
+// console.log(miArreglo);
 
-//Arreglos multidimensionales
+// //Arreglos multidimensionales
 
-var miArreglo = [[1,2,3],[4,5,6],[7,8,9]];
-console.log(miArreglo);
+// var miArreglo = [[1,2,3],[4,5,6],[7,8,9]];
+// console.log(miArreglo);
 
-/*
-Arreglo:        [[1, 2, 3],[4, 5, 6],[7, 8, 9]]
-Posición:           0       1       2
-Indices internos:0  1  2    0  1  2   0  1  2  
-*/
+// /*
+// Arreglo:        [[1, 2, 3],[4, 5, 6],[7, 8, 9]]
+// Posición:           0       1       2
+// Indices internos:0  1  2    0  1  2   0  1  2  
+// */
 
 
-console.log(miArreglo[0][0]);
-console.log(miArreglo[0][1]);
-console.log(miArreglo[3][2]);
+// console.log(miArreglo[0][0]);
+// console.log(miArreglo[0][1]);
+// console.log(miArreglo[2][2]);
 
-//push
+// //push
 
-var estaciones = ["Primavera", "Verano", "Otoño",];
-console.log(estaciones);
-estaciones.push("Invierno");//Adds a new element
-console.log(estaciones);
+// var estaciones = ["Primavera", "Verano", "Otoño",];
+// console.log(estaciones);
+// estaciones.push("Invierno");//Adds a new element
+// console.log(estaciones);
 
-//pop
+// //pop
 
-var estaciones = ["Primavera", "Verano", "Otoño", "Invierno"];
-console.log(estaciones);
-var estacion = estaciones.pop();//Removes the last element
-console.log(estaciones);
-console.log(estacion);
+// var estaciones = ["Primavera", "Verano", "Otoño", "Invierno"];
+// console.log(estaciones);
+// var estacion = estaciones.pop();//Removes the last element
+// console.log(estaciones);
+// console.log(estacion);
 
-//shift
+// //shift
 
-var estaciones = ["Primavera", "Verano", "Otoño", "Invierno"];
-console.log(estaciones);
-var estacion = estaciones.shift();//Removes the first element
-console.log(estaciones);
-console.log(estacion);
+// var estaciones = ["Primavera", "Verano", "Otoño", "Invierno"];
+// console.log(estaciones);
+// var estacion = estaciones.shift();//Removes the first element
+// console.log(estaciones);
+// console.log(estacion);
 
-//unshift
+// //unshift
 
-var estaciones = [ "Verano", "Otoño", "Invierno"];
-estaciones.unshift("Primavera");//Adds a new element at the beginning
-console.log(estaciones);
+// var estaciones = [ "Verano", "Otoño", "Invierno"];
+// estaciones.unshift("Primavera");//Adds a new element at the beginning
+// console.log(estaciones);
 
-//miniproject
+// //miniproject
 
-var miListaDeContactos = [["Juan", 123456], ["Maria", 654321], ["Pedro", 456789], ["Ana", 987654], ["Luis", 321654]];
+// var miListaDeContactos = [["Juan", 123456], ["Maria", 654321], ["Pedro", 456789], ["Ana", 987654], ["Luis", 321654]];
 
-for (var i = 0; i < miListaDeContactos.length; i++){
-    console.log(i + "Nombre: " + miListaDeContactos[i][0]);
-    console.log(i + "Teléfono: " + miListaDeContactos[i][1]);
+// for (var i = 0; i < miListaDeContactos.length; i++){
+//     console.log(i+1 + "Nombre: " + miListaDeContactos[i][0]);
+//     console.log( "Teléfono: " + miListaDeContactos[i][1]);
+// }
+
+//-----------------------FUNCIONES--------------------
+
+// function mostrarMensaje(){
+//     console.log("Hola Mundo");    
+// }
+
+// mostrarMensaje();
+
+// function sumar(a,b){
+//     let suma = a + b;
+//     console.log("El resultado es: "+ suma);
+// }
+
+// let x = 2;
+
+// sumar(10,20);
+// sumar(100,200);
+// sumar(x,x);
+
+// function concatenarTresCaenas(cadena1, cadena2, cadena3){
+//     let resultado = cadena1 + " " + cadena2 + " " + cadena3;
+//     console.log(resultado);
+// }
+
+// concatenarTresCaenas("Hola", "como", "estas");
+
+//--------------------Variable global y local----------------
+
+var miVariableGlobal = "Soy una variable global";
+
+console.log(miVariableGlobal);
+
+function miFuncion(){
+    var miVariableLocal = "Soy una variable local";
+    console.log(miVariableLocal);
+    console.log(miVariableGlobal);
+}
+
+var miNombre = "Nicolas";
+
+function mostrarMiNombre(){
+    var miNombre = "Juan";
+    console.log(miNombre);  
 }
