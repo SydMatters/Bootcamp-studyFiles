@@ -1009,7 +1009,41 @@
 //-------------------FUNCIONES FLECHA-----------------
 //Funciones anonimas, no tienen nombre especifico
 
-const fecha = function(){
-    return new Date();
-}
+// const fechaF = function(){
+//     return new Date();
+// }
+
+// const fecha = () => new Date(); //Funcion flecha
+
+// const sumarTres = (a,b,c) => a + b + c;
+
+// const concatenar = (nombre, apellido) => nombre + " " + apellido;
+
+// const concatenarArr = (arr1, arr2) => arr1.concat(arr2);
+
+// const sumar = (a,b) => {
+//     let num =6;
+//     return a + b + num;
+// }
+
+// //Valor por defecto
+
+// const incrementar = (num, valor = 1) => num + valor;
+
+//-------------------Rest operator-----------------
+
+// function miFuncion(...args){
+//     console.log(args);
+// }
+
+// miFuncion(1,2,3,4,5);
+// miFuncion(1,2,3,4,5,6,7,8,9,10);
+// miFuncion([1,2,3,4,5]), [6,7,8,9,10];
+
+// const sumar = (...args) => {
+//     const args = [...args];
+//     return args.reduce((a,b) => a + b, 0);
+// }
+
+//-------------------Spread operator-----------------
 
