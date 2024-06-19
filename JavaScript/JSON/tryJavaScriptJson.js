@@ -65,3 +65,4 @@ fs.writeFile('pruebaJSON.json', newClient, (err) => {
     if (err) throw err;
     console.log('Cliente añadido');
 })
+
