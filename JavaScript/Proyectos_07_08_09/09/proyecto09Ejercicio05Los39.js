@@ -13,24 +13,25 @@ Vgr: Salvedad: Para entradas de tipo string, no garantizamos los resultados.
 */
 
 // Importa el módulo 'prompt-sync' para recibir entradas del usuario de forma síncrona
-const prompt = require('prompt-sync')();
+const prompt = require('prompt-sync')(); // Importa la librería prompt-sync
+const nTermino = parseInt(prompt("Ingrese el termino para la serie: ")); //Solicita el termino deseado para la serie de Perrin
 
-//la funcion SeriePerrin se encarga de imprimir la serie de perrin hasta n terminos
-function SeriePerrin(n /*numero de terminos */) {
-    let start = 3; // variable que contiene el primer termino de la serie, luego este mutara para ser el antepenultimo termino (n-2)
-    let next = 0; // segundo termino de la serie de perrin, luego mutara a termino(n-1)
-    let next2 = 2; // termino 3 de la serie de perrin, luego mutara a termino = (n-2) + (n-1)
-    for (let i = 0; i < n; i++) {
-        console.log(`${start}`);
-        let aux = next2; // auxiliar para almacenar el valor de next2
-        next2 = start + next;
-        start = next;
-        next = aux;
-    }
+// Función recursiva para calcular la serie de Perrin
+const seriePerrin = ((termino) => {
+  if (termino === 0) return 3; // Primer término de la serie de Perrin
+  if (termino === 1) return 0; // Segundo término de la serie de Perrin
+  if (termino === 2) return 2; // Segundo término de la serie de Perrin
+
+  
+  return seriePerrin(termino - 2) + seriePerrin(termino - 3);
+});
+
+let serie = ""; // Variable para almacenar la serie de Perrin
+
+// Genera la serie de Pell hasta el término nTermino
+for (let termino = 0; termino < nTermino - 1; termino++) {
+  serie += seriePerrin(termino) + ", ";
 }
 
-const number = parseInt(
-    prompt("Por favor, ingresa el número de terminos deseados: "),
-);
-
-SeriePerrin(number);
+serie += seriePerrin(nTermino - 1) + ".";  // Agrega el último término de la serie de Perrin para que termine con un punto.
+console.log(serie); // Imprime la variable serie con la serie de Perrin generada.

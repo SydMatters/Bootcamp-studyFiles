@@ -17,7 +17,7 @@
 
 const PromptSync = require('prompt-sync')();// se importa la libreria prompt-sync en una constante PromptSync
 
-function CalculatePieces(value, amount){//funcion para 
+function CalculatePieces(value, amount){
     let amountInvested=0, valueBankLoan=0, valueManufacturerCredit=0, interestCollectedByManufacturer=0, valueTotal=0;
     valueTotal=value*amount;//monto total
     if(valueTotal>500000){//si el total es mayor a $500000

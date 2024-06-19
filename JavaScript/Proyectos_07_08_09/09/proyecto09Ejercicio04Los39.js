@@ -12,7 +12,7 @@ Restrincciones: El número ingresado debe ser mayor a 0, no puede ser decimal y 
 */
 
 const prompt = require('prompt-sync')(); // Importa la librería prompt-sync
-const nTermino = parseInt(prompt("Ingrese el termino para la serie: ")); //Solicita el termino deseado para la serie de Lucas
+const nTermino = parseInt(prompt("Ingrese el termino para la serie: ")); //Solicita el termino deseado para la serie de Pell
 
 // Función recursiva para calcular la serie de Pell
 const seriePell = ((termino) => {

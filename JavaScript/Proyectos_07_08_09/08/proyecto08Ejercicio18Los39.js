@@ -14,6 +14,7 @@
 - Descripción:En un estacionamiento cobran $1.800 por hora o fracción. Diseñe un algoritmo que determine cuanto debe pagar un cliente por el
 estacionamiento de su vehículo, conociendo el tiempo de estacionamiento en horas y minutos.*/
 
+const prompt = require ('prompt-sync')();
 // Preguntamos al usuario por las horas y minutos de estacionamiento.
 let horas = parseInt(prompt("Ingrese las horas de estacionamiento:"));
 let minutos = parseInt(prompt("Ingrese los minutos de estacionamiento:"));
@@ -28,4 +29,4 @@ let totalHoras = horas + (minutos > 0 ? 1 : 0);
 let costoTotal = totalHoras * costoPorHora;
 
 // Mostramos el costo total al usuario.
-alert("El costo total por el estacionamiento es: $" + costoTotal);
+console.log("\nEl costo total por el estacionamiento es: $" + costoTotal);

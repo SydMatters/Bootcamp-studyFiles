@@ -13,25 +13,24 @@ Vgr: Salvedad: Para entradas de tipo string, no garantizamos los resultados.
 */
 
 // Importa el módulo 'prompt-sync' para recibir entradas del usuario de forma síncrona
-const prompt = require('prompt-sync')();
+const prompt = require('prompt-sync')(); // Importa la librería prompt-sync
+const nTermino = parseInt(prompt("Ingrese el termino para la serie: ")); //Solicita el termino deseado para la serie de Padovan
 
-//la funcion SeriePadovan se encarga de imprimir la serie de perrin hasta n terminos
-function SeriePadovan(n /*numero de terminos */){
-    let start = 1;// variable que contiene el primer termino de la serie, luego este mutara para ser el antepenultimo termino (n-2)
-    let next = 0;// segundo termino de la serie de Padovan, luego mutara a termino(n-1)
-    let next2 = 0;// termino 3 de la serie de Padovan, luego mutara a termino = (n-2) + (n-1)
-    for(let i = 0; i < n; i++){
-        console.log(`${start}`);
-        let aux = next2;// auxiliar para almacenar el valor de next2
-        next2 = start+next;
-        start = next;
-        next = aux;
-    }
+// Función recursiva para calcular la serie de Padovan
+const seriePadovan = ((termino) => {
+  if (termino === 0) return 1; // Primer término de la serie de Padovan
+  if (termino === 1) return 0; // Segundo término de la serie de Padovan
+  if (termino === 2) return 0; // Segundo término de la serie de Padovan
+
+  return seriePadovan(termino - 2) + seriePadovan(termino - 3);
+});
+
+let serie = ""; // Variable para almacenar la serie de Perrin
+
+// Genera la serie de Pell hasta el término nTermino
+for (let termino = 0; termino < nTermino - 1; termino++) {
+  serie += seriePadovan(termino) + ", ";
 }
 
-
-const number = parseInt(
-    prompt("Por favor, ingresa el número de terminos deseados: "),
-);
-
-SeriePadovan(number);
+serie += seriePadovan(nTermino - 1) + ".";  // Agrega el último término de la serie de Perrin para que termine con un punto.
+console.log(serie); // Imprime la variable serie con la serie de Padovan generada.

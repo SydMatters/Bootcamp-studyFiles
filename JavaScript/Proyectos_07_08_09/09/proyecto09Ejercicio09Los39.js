@@ -49,7 +49,7 @@ function calculateTerm(term) {//funcion que ayuda a calcular los terminos
 
 function printBell(term, quantity) {//imprime uno a uno los terminos de la sumatoria
     if (term < quantity) {//mientras no sea igual al "n", seguirá iterando
-        console.log(calculateTerm(term) );//llama a la funcion que calcula los terminos
+        console.log(calculateTerm(term));//llama a la funcion que calcula los terminos
         printBell(term + 1, quantity);//recursividad
     } else {
         console.log(calculateTerm(term) + ".");//cuando sea el ultimo termino, le agg un punto
@@ -57,7 +57,7 @@ function printBell(term, quantity) {//imprime uno a uno los terminos de la sumat
 }
 
 function ask(){//le pide al usuario que ingrese el termino n
-let quantityTerms = prompt ( "Ingrese el termino ");
+let quantityTerms = prompt ( "Ingrese el termino: ");
 printBell(0, parseInt(quantityTerms) - 1);//llama a la funcion que imprime
 }
 

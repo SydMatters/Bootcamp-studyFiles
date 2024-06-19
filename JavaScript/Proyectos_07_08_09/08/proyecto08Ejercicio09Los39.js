@@ -17,12 +17,14 @@
 
 const prompt = require('prompt-sync')();
 
+console.log("Este programa lee dos valores. Interés(%) y Capital. Si el dinero recibido por intereses es mayor que $7000," +
+    " se le indicara al inversionista que invierta, de lo contrario se le indicara que no debe invertir")
 function invertir() {
     let interes = 0;
     let capital = 0;
     let saldo = 0;
-    interes = parseFloat(prompt('por favor, ingrese el interes: '));
-    capital = parseFloat(prompt('Por favor, ingrese el capital: '));
+    interes = parseFloat(prompt('Entre el interes en %: '));
+    capital = parseFloat(prompt('Entre el capital a invertir en $: '));
 
     if (capital > 7000) {
         saldo = capital + ((capital * interes)/ 100 )

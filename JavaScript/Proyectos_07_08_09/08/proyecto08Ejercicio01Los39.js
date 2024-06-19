@@ -27,27 +27,29 @@ primos. */
 // Se importa el módulo 'prompt-sync' para habilitar la lectura sincrónica desde la línea de comandos.
 const prompt = require('prompt-sync')();
 
+console.log("Este programa, lee un número entre uno(1) y cinco(5), e imprime si es primo o no.\n")
+
 // Se define la función 'esPrimo' que determina si un número es primo.
 function esPrimo(numero) {
     // Si el número es 1, no es primo por definición, por lo que retorna falso.
     if (numero == 1) {
-        return false;
+        return "El número no es primo.";
     }
     // Se itera desde 2 hasta el número - 1 para verificar si el número tiene divisores.
     for (var i = 2; i < numero; i++) {
         // Si el número es divisible por 'i', entonces no es primo y retorna falso.
         if (numero % i === 0) {
-            return false;
+            return "El número no es primo.";
         }
     }
     // Si el número no tiene divisores además de 1 y sí mismo, es primo y retorna verdadero.
-    return true;
+    return "El número es primo";
 }
 
 // Se define la función 'pedirNumero' que solicita al usuario ingresar un número.
 function pedirNumero() {
     // Se hace una pregunta al usuario y se espera su respuesta.
-    let numero = prompt("Numero (1-5): ");
+    let numero = prompt("Entre un número: ");
     // Se verifica si el número ingresado está entre 1 y 5.
     if (numero >= 1 && numero <= 5) {
         // Si es así, se imprime si el número es primo o no.

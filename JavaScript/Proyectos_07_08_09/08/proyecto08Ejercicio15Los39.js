@@ -12,11 +12,9 @@ Descripcion: Saca el valor apagar a partir del descuento
 
 const prompt = require ('prompt-sync')();
 
+console.log("Hola querido Usuario. \nRecuerda que por la compra de tres camisas o más obtienes un descuento del 20% sobre el total de su compra y si son menos de tres un 10% . \n");
 //Recibes los parametros del usuario a traves del prompt y lo pasas a entero
-let NumeroDeCamisas = parseInt (prompt (`Hola querido Usuario. \nRecuerda que por la compra de tres camisas 
-o más obtienes un descuento 
-del 20% sobre el total de su compra y si son menos de tres un 10% . \n
-¿Cuantas camisas deseas comprar hoy? : `));
+let NumeroDeCamisas = parseInt (prompt (`¿Cuantas camisas deseas comprar hoy? : `));
 
 let Precio = parseInt(prompt( "¿Cuál es el valor total de su compra?: "));
 

@@ -25,7 +25,7 @@ function serieDeCatalan(indice){
         for (let i = 0; i <= indice; i++) { // Se recorre la serie desde el termino 0 hasta el termino deseado
             serie[i] = (factorial(2*i)) / (factorial(i)*factorial(i+1)); // Se calcula el termino actual
         }
-        return serie; // Se retorna la serie
+        return serie.join(", "); // Se retorna la serie
     }
 }
 

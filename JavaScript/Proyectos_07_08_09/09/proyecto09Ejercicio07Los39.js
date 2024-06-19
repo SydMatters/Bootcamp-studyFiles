@@ -9,22 +9,25 @@
 - Programa de Ingeniería de Sistemas y Computación
 - Descripcion: Este programa pide un numero de termino deseado de la serie de Narayana: 1, 1, 1, 2, 3, 4, 6, 9, 13, ...*/
 
-const prompt = require('prompt-sync')(); // Se importa la libreria prompt-sync
+const prompt = require('prompt-sync')(); // Importa la librería prompt-sync
+const nTermino = parseInt(prompt("Ingrese el termino para la serie: ")); //Solicita el termino deseado para la serie de PNrayana
 
-function serieDeNarayana(indice){
-    let serie = [1, 1, 1]; // Se inicializa la serie con los primeros 3 terminos
-    if (indice < 0) // Se valida si el indice es negativo
-        console.log("No se permiten números negativos!"); // Se imprime un mensaje de error
-    else if (indice <= 2) // Se valida si el indice es menor o igual a 2
-        return serie.slice(0, indice + 1); // Se retorna la serie hasta el indice
-    else {
-        for (let i = 3; i <= indice; i++) { // Se recorre la serie desde el termino 4 hasta el termino deseado
-            serie[i] = serie[i-1] + serie[i-3]; // Se calcula el termino actual
-        }
-        return serie;
-    }
+// Función recursiva para calcular la serie de PNrayana
+const seriePNrayana = ((termino) => {
+  if (termino === 0) return 1; // Primer término de la serie de PNrayana
+  if (termino === 1) return 1; // Segundo término de la serie de PNrayana
+  if (termino === 2) return 1; // Segundo término de la serie de PNrayana
+
+  
+  return seriePNrayana(termino - 1) + seriePNrayana(termino - 3);
+});
+
+let serie = ""; // Variable para almacenar la serie de Nrayana
+
+// Genera la serie de Pell hasta el término nTermino
+for (let termino = 0; termino < nTermino - 1; termino++) {
+  serie += seriePNrayana(termino) + ", ";
 }
 
-let indice = parseInt(prompt("Ingrese el termino al que desea ingresar: "));
-
-console.log("La serie hasta el termino " + indice + " es: " + serieDeNarayana(indice));
+serie += seriePNrayana(nTermino - 1) + ".";  // Agrega el último término de la serie de Perrin para que termine con un punto.
+console.log(serie); // Imprime la variable serie con la serie de Padovan genNrayana

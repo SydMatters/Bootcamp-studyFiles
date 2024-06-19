@@ -12,26 +12,28 @@
 - Descripción: Este programa calcula el resultado aproximado del logaritmo natural de x por Series de Taylor
 */
 
-const prompt = require('prompt-sync')(); // Importa el modulo prompt-sync que viene de Node.js
-
-let a = 0; // Inicializa la variable a en 0
-let b = 1; // Inicializa la variable b en 1
-let suma = 0; // Inicializa la variable suma en 0
-
-console.log("Serie de fibonacci entre 0 y 100: ");  // Imprime el encabezado
-
-
-while (a <= 100) {        // Mientras a sea menor o igual a 100
-
-    suma += a;             // Suma la variable (a) a la variable suma
-    let c = a;               // Guarda la variable a en la variable c
-    a = b;                   // Guarda la variable b en la variable a
-    b = c + b;                // Suma la variable c con la variable b
-
-    console.log(c);          // Imprime la variable c
-}
-
-console.log(`Y su suma es:${suma} `);     // Imprime la variable suma
-
+console.log(`Este programa presenta la suma de los elementos de la serie de Fibonacci entre 0 y 100.
+Los números a sumar son:`)
+let acumSumaterminos = 0;
+    // esta variable es definida por el cliente en el contrato y limita el valor MÁXIMO que puede contener cáda elemento de la serie
+    let limiteDelCliente = 100;
+    // PAR inicial de valores en la serie soliciatda por el cliente:
+    let elementosEnlaSerieFibonacci   = [0, 1];
+    // cíclo con incremento UNO (1) que itera para asignar los valores a la serie,
+    // en éste cíclo se recurre a la variable temporal {i}
+    for(i = 0; i < limiteDelCliente + 1; ++ i){
+    // se define la variable {suma} con el valor suma de LOS DOS ÚLTIMOS ELEMENTOS de la serie solicitada por el cliente:
+    let sumaUltimos2Elementos = elementosEnlaSerieFibonacci[elementosEnlaSerieFibonacci.length - 1] + elementosEnlaSerieFibonacci[elementosEnlaSerieFibonacci.length - 2];
+    // únicamente se agrega el elemento a la lísta si dícho elemento NO SOBREPASA el límite establecido por el cliente:
+        if(sumaUltimos2Elementos < limiteDelCliente) {
+            elementosEnlaSerieFibonacci.push(sumaUltimos2Elementos);
+    // si el elemento sobrepasa la restricción indicada por el cliente, finalizamos el cíclo:
+        }
+        }
+    
+    // el cliente ha solicitado imprimir el resultado:
+    console.log(elementosEnlaSerieFibonacci.join(', ') + " y su suma es: " + elementosEnlaSerieFibonacci.reduce((a, value) => a + value, 0))
+    
+    // fin del programa
 
 

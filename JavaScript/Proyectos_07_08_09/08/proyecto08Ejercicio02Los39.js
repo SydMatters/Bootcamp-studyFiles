@@ -28,10 +28,11 @@ function esPar(numero) {
   return numero % 2 === 0;
 }
 
+console.log("Este programa lee un número e imprime si es par o impar\n");
 // Función para pedir al usuario que ingrese un número y mostrar si es par o impar.
 function pedirNumero() {
   // Pedimos al usuario que ingrese un número.
-  let entrada = prompt('Este programa lee un número e imprime si es par o impar.\nEntre un número: ');
+  let entrada = prompt('Entre un número: ');
 
   // Convertimos la entrada a un número.
   const numero = parseInt(entrada, 10);
@@ -40,9 +41,6 @@ function pedirNumero() {
   if (Number.isInteger(numero)) {
     // Imprimimos si el número es par o impar.
     console.log(esPar(numero) ? 'El número es par' : 'El número es impar');
-  } else {
-    console.log('Por favor, ingrese un número válido.');
-    pedirNumero();
   }
 }
 
