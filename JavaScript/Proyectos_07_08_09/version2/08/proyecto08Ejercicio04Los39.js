@@ -12,17 +12,20 @@
 
 // - Descripción:
 // El programa recibirá un valor que representa el numero del mes e imprime el mes en palabra
-
+//Salvedad: El programa no recibe letras ni numeros negativos, es solo para numeros entre el 1 y el 12.
 const prompt = require("prompt-sync")();
 
 console.log("Este programa, lee un número entre [1 y 12] e imprime el mes que le corresponde en el año. Referencia: 1=Enero. 12=Diciembre")
 const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']; //array
 
 const imprimirMes = () => {
-    
-let mes = prompt("Ingrese el numero del mes: ");
+    let mes = prompt("Ingrese el numero del mes: ");
+    if(mes >= 1 || mes <= 12){
+        console.log("Rango no permitido");
+    }else{
+        console.log(`El mes es ${meses[mes-1]}`);
+    }    
 
-console.log(`El mes es ${meses[mes-1]}`)
 };
 
 // Llamar a la función para calcular el volumen de la esfera

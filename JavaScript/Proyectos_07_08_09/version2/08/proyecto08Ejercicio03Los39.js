@@ -23,8 +23,8 @@ const DIAS = ["lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "do
 // Pedir por consola el numero del dia de la semana
 let numeroDia = parseInt(prompt("Entre un número: "));
 
-if (numeroDia < 0 || numeroDia > 7){
-  console.log("El numero supera el rango")
-} else {
+if (numeroDia >= 1 && numeroDia <= 7){
   console.log(`El numero ${numeroDia} corresponde al dia de la semana ${DIAS[numeroDia-1]}`);
+} else {
+  console.log("El numero está fuera del rango");
 }

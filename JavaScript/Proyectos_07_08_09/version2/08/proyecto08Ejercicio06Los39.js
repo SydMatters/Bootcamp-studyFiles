@@ -17,8 +17,11 @@ const PromptSync = require("prompt-sync")(); // se importa la libreria prompt-sy
 
 function NumberMajor100() {
     //Metodo para decir si un numero es mayor a 100
-    let value = PromptSync("Escriba un numero: "); //le pide al usuario el numero
-    if (value > 100) {
+    let value = parseInt(PromptSync("Escriba un numero: ")); //le pide al usuario el numero
+    if(isNaN(value)){
+        console.log("La entrada no es un numero");
+    }
+    else if (value > 100) {
         console.log(`El numero ${value} es mayor que 100`); //si value es mayor a 100 imprime esto
     } else {
         console.log(`El numero ${value} es menor o igual a 100`); //de lo comtrario esto

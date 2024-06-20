@@ -51,4 +51,4 @@ function aumentoAntiguedad(tiempo){ // Declaramos la funcion, se necesita una va
     console.log(`El sueldo mensual es de ${SALARIOMES} euros`); // Mostramos por pantalla el resultado
 }
 
-console.log(aumentoAntiguedad(tiempo)); // Ejecutamos la funcion 
+aumentoAntiguedad(tiempo); // Ejecutamos la funcion 

@@ -36,7 +36,7 @@ function pedirNumero() {
   let entrada = prompt('Entre un número: ');
 
   // Convertimos la entrada a un número.
-  const numero = parseInt(entrada, 10);
+  const numero = parseInt(entrada, 2);
 
   // Verificamos si la entrada es un número válido.
   if (Number.isInteger(numero)) {

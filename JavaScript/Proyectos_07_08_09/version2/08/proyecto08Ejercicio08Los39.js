@@ -14,7 +14,7 @@ const prompt = require ('prompt-sync')(); //Se require o pide la librería promp
 let numero1 = prompt("Ingrese el primer número: "); // Por medio de un let se declaran las variables 
 let numero2 = prompt("Ingrese el segundo número: ");
 let numero3 = prompt("Ingrese el tercer número: ");
-if (num3 = num1 * num2){//Se usa el condicional para revisar si el tercer número es el producto de los dos anteriores
+if (numero3 == numero1 * numero2){//Se usa el condicional para revisar si el tercer número es el producto de los dos anteriores
     console.log ("El tercer número es el producto de los dos primeros");// En caso de que sea verdadero 
 }
 else{
