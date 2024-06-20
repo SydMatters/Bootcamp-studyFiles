@@ -1,7 +1,7 @@
 // - Fecha de publicación: [18/06/2024]
 // - Número de la tarea: [05]
 // - Hora: [10:00]PM
-// - Versión de la tarea: [01]
+// - Versión de la tarea: [02]
 // - Autores: [Todos los ingenieros del grupo (39)]
 // - Nombre del lenguaje utilizado: [Javascript]
 // - Versión del lenguaje utilizado: [“ECMASCRIPT 6.0”]
