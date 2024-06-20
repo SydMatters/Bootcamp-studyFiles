@@ -1,16 +1,16 @@
 /*
-// - Fecha de publicación: [19/06/2024]
-// - Número de la tarea: [12]
-// - Hora: [11:20]AM
-// - Versión de la tarea: [01]
-// - Autores: [Todos los ingenieros del grupo (39)]
-// - Nombre del lenguaje utilizado: [Javascript]
-// - Versión del lenguaje utilizado: [v12.22.9]
-// - Presentado a: [Doctor Ricardo Moreno Laverde]
-// ------- | Universidad Tecnológica de Pereira |-------------
-// --- | Programa de Ingeniería de Sistemas y Computación |--
-// - Descripción:
-// Este program lee desde el teclado un numero entero y lo
+- Fecha de publicación: [19/06/2024]
+- Número de la tarea: [12]
+- Hora: [11:20]AM
+- Versión de la tarea: [01]
+- Autores: [Todos los ingenieros del grupo (39)]
+- Nombre del lenguaje utilizado: [Javascript]
+- Versión del lenguaje utilizado: [v12.22.9]
+- Presentado a: [Doctor Ricardo Moreno Laverde]
+------- | Universidad Tecnológica de Pereira |-------------
+--- | Programa de Ingeniería de Sistemas y Computación |--
+- Descripción:
+Este program lee desde el teclado un numero entero y lo
     imprima al revés.
     Salvedades: 
     para strings o numeros no enteros, no se garantizan resultados
@@ -39,10 +39,6 @@
       {return 0}
 }
       
-    
-    
-    
-    
     
     console.log("Este programa lee desde el teclado un número");
     console.log("entero y lo imprime al revés.");

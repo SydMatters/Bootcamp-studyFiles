@@ -25,20 +25,23 @@ function imprimir(carac,times,line){ //Esta función concatena caracteres "carac
 }
 function recursividadArriba(n,times,esp){//imprimirá la parte de arriba a partir de un n, en este caso será 3, cont será la cantidad de "A" a imprimir y los espacios.
     if (n > 0){
-        let line = imprimir("A",times,""); //Añade a la línea existente las "A",
+        let line0 = imprimir(" ",27,"")
+        let line = imprimir("A",times,line0); //Añade a la línea existente las "A",
         let line2 = imprimir(" ",esp,line);//los espacios
         let line3 = imprimir("A",times,line2);//Y las "A" del final
         console.log(line3);//Muestra la línea
         return recursividadArriba((n-1),(times +1),(esp - 2));
     } else {
-        console.log(imprimir("A",(((times-1)*2)+1),""))//Esto muestra la línea de la mitad, que es el doble de la cantidad de filas o "times" n + 1, mirar imagen.
+
+        console.log(imprimir(" ",27,"") + imprimir("A",(((times-1)*2)+1),""))//Esto muestra la línea de la mitad, que es el doble de la cantidad de filas o "times" n + 1, mirar imagen.
     //La lógica de esta linea es "times", básicamente en lugar del espacio del medio imprimimos una A demás.
     }
 }
 //La proxima función será casi igual, solo que al llamar la función se sumarán espacios y se restarán letras o "times"
 function recursividadAbajo(n,times,esp){//imprimirá la parte de arriba a partir de un n, en este caso será 3, cont será la cantidad de "A" a imprimir y los espacios.
     if (n > 0){
-        let line = imprimir("A",times,""); //Añade a la línea existente las "A",
+        let line0 = imprimir(" ",27,"")
+        let line = imprimir("A",times,line0); //Añade a la línea existente las "A",
         let line2 = imprimir(" ",esp,line);//los espacios
         let line3 = imprimir("A",times,line2);//Y las "A" del final
         console.log(line3);//Muestra la línea

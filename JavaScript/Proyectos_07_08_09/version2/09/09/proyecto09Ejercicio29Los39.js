@@ -17,9 +17,9 @@ Recrear la serie de tayler de la funcion e^x con las nth iteraciones que indique
 const prompt = require("prompt-sync")();
 
 // Funcion de euler con la serie de taylor
-function eulerTaylor(x, n, i=1, exp=1, fact=1) {
-    if(i > n+1) return 0;
-    return (exp/fact) + eulerTaylor(x, n, i+1, exp*x, fact*i);
+function eulerTaylor(x, iteraciones, i=1, exp=1, fact=1) {
+    if(i > iteraciones+1) return 0;
+    return (exp/fact) + eulerTaylor(x, iteraciones, i+1, exp*x, fact*i);
 }
 
 

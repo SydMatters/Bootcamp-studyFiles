@@ -24,11 +24,11 @@ function trianguloRectangulo(numeroEspacios, numeroLetras, fila, letra, espacio)
     if(fila < maxfilas){
         imprimirAlgo(espacio,numeroEspacios)//Se llama a la funcion imprimirAlgo con el caracter " " y el numero de caracteres a imprimir.
         imprimirAlgo(letra,numeroLetras)//Se llama a la funcion imprimirAlgo con el caracter "A" y el numero de caracteres a imprimir.
-        fila++
-        numeroEspacios--
-        numeroLetras++//En cada fila los espacios se disminuyen mientras que las letras se incrementan.
+        // fila++
+        // numeroEspacios--
+        // numeroLetras++//En cada fila los espacios se disminuyen mientras que las letras se incrementan.
         console.log("")/*console.log imprime y despues agrega un cambio de linea por eso se usa cuando todos los caracteres de una linea han sido impresos.*/
-        trianguloRectangulo(numeroEspacios, numeroLetras, fila, letra, espacio)
+        trianguloRectangulo(--numeroEspacios, ++numeroLetras, ++fila, letra, espacio)
     }else{process.stdout.write("")}
 }
 

@@ -20,9 +20,12 @@ Para este programa, se presentará la serie de Fibonacci hasta llegar sin sobrep
 //Funcion principal que muestra los números de la sucesiónn de Fibbonacci cuando el valor de este es menor a 10000
 function Fibonacci(n1, n2) {
     //Usamos n1 y n2 como terminos de la sucesión
-    if (n1 < 10000) {
+    if (n1 < 6764) {
+
         process.stdout.write(n1 + ", "); //Muestra en consola el n1 con la coma y el espacio sin hacer salto de linea
         Fibonacci(n2, (n1 + n2)); //Llamada recursiva 
+    }else {
+        process.stdout.write(n1 + " ")
     }
 }; //Fin función
 
