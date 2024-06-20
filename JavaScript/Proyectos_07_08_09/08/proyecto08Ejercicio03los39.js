@@ -1,18 +1,14 @@
-/*
--Fecha de creación:
--Version de su código: 1
--Autores: Ing(c)
--Nombre lenguaje utilizado: javascript
--Version del lenguaje utilizado: ECMAScript 6
--Presentado a: Doctor Ricardo Moreno Laverde
-- Universidad Tecnológica de Pereira
-- Programa de Ingeniería de Sistemas y Computación
+// - Fecha de publicación: [18/06/2024]
+// - Número de la tarea: [03]
+// - Hora: [10:00]PM
+// - Versión de la tarea: [02]
+// - Autores: [Todos los ingenieros del grupo (39)]
+// - Nombre del lenguaje utilizado: [Javascript]
+// - Versión del lenguaje utilizado: [ECMAScript 6]
+// - Presentado a: [Doctor Ricardo Moreno Laverde]
 
-Requerimiento:
-instalar prompr-sync con el siguiente comando
-"npm install prompt-sync"
-
-*/
+// ------- | Universidad Tecnológica de Pereira |-------------
+// --- | Programa de Ingeniería de Sistemas y Computación |---
 
 //Descripcion del programa
 //Que pida un número del 1 al 7 e imprima el día de la semana correspondiente.
@@ -20,39 +16,15 @@ instalar prompr-sync con el siguiente comando
 //Importar libreria prompt-sync
 const prompt = require("prompt-sync")();
 
-console.log(
-  "Este programa, lee un número entre [1 y 7] e imprime el día que le corresponde en la semana. Referencia: 1=Lunes. 7=Domingo"
-);
+console.log("Este programa, lee un número entre [1 y 7] e imprime el día que le corresponde en la semana. Referencia: 1=Lunes. 7=Domingo");
 
-//Variable que almacena el número
-let numero = prompt("Entre un número: ");
+const DIAS = ["lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domigo"];
 
-//Convertir la cadena a número
-numero = parseInt(numero);
+// Pedir por consola el numero del dia de la semana
+let numeroDia = parseInt(prompt("Entre un número: "));
 
-switch (numero) {
-  case 1:
-    console.log("El día es Lunes");
-    break;
-  case 2:
-    console.log("El día es Martes");
-    break;
-  case 3:
-    console.log("El día es Miércoles");
-    break;
-  case 4:
-    console.log("El día es Jueves");
-    break;
-  case 5:
-    console.log("El día es Viernes");
-    break;
-  case 6:
-    console.log("El día es Sábado");
-    break;
-  case 7:
-    console.log("El día es Domingo");
-    break;
-  default:
-    console.log("El número no está en el rango de 1 a 7");
-    break;
+if (numeroDia < 0 || numeroDia > 7){
+  console.log("El numero supera el rango")
+} else {
+  console.log(`El numero ${numeroDia} corresponde al dia de la semana ${DIAS[numeroDia-1]}`);
 }

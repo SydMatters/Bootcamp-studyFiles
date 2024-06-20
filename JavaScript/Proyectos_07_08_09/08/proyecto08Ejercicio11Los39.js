@@ -1,13 +1,18 @@
-/* Fecha de publicación: Junio 18
-Hora:
-Versión de su código: 1
-Autores. Ing Los 39
-Nombre del lenguaje utilizado: JavaScript
-Versión del lenguaje utilizado: ECMAScript 6
-Presentado a: Doctor Ricardo Moreno Laverde
-Universidad Tecnológica de Pereira
-Programa de Ingeniería de Sistemas y Computación
-Descripcion: Aplica un descuento del 20% a una compra del cliente en caso de un precio mayor a 100K*/
+// - Fecha de publicación: [18/06/2024]
+// - Número de la tarea: [11]
+// - Hora: [10:00]PM
+// - Versión de la tarea: [02]
+// - Autores: [Todos los ingenieros del grupo (39)]
+// - Nombre del lenguaje utilizado: [Javascript]
+// - Versión del lenguaje utilizado: [ECMAScript 6]
+// - Presentado a: [Doctor Ricardo Moreno Laverde]
+
+// ------- | Universidad Tecnológica de Pereira |-------------
+// --- | Programa de Ingeniería de Sistemas y Computación |---
+
+// - Descripción:
+// Pide un número y muestra si es impar o no
+// Descripcion: Aplica un descuento del 20% a una compra del cliente en caso de un precio mayor a 100K*/
 const prompt = require('prompt-sync')();
 let precio = parseFloat(prompt("Ingrese el precio de la compra: "));
 function descuento() {
