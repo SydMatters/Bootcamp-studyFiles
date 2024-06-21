@@ -1006,7 +1006,7 @@
 // colores.amarillo = "#FFFF00"; //No se puede agregar, read-only
 // delete colores.rojo; //No se puede eliminar, read-only
 
-//-------------------FUNCIONES FLECHA-----------------
+//------------------ FLECHA-----------------
 //Funciones anonimas, no tienen nombre especifico
 
 // const fechaF = function(){
