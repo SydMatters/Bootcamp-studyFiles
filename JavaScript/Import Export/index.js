@@ -24,8 +24,11 @@
 
 // console.log(math.double(2));
 
-import math from './math.js';
-
+import math, {add,subtract} from './math.js';
+import http from 'http';
 
 console.log(math.add(1, 2));
-console.loog(math.subtract(1, 2));
+console.log(math.subtract(1, 2));
+
+console.log(add(1, 2));
+consoloe.log(subtract(1, 2));
