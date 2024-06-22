@@ -142,8 +142,24 @@
 //     return this +"test"
 // }
 // console.log(string.name);
+//mostrando values
+// const user = {
+//     name: "ryan",
+//     lastName : "black",
+//     age: 30,
+//     showName(){
+//         return this.name;
+//     }
+// }
 
-const user = {
-    name: "",
-    
+// console.log(Object.values(user))
+
+//new
+
+function Person(){
+    this.name = "",
+    this.lastname = ""
 }
+
+const person = Person()
+console.log(person)
