@@ -203,17 +203,43 @@ const inputNumber = document.querySelector('[type="number"]');
 
 */
 
-console.dir(inputNumber);
+// console.dir(inputNumber);
 
+
+
+/* 
 //Cómo modificar y obtener atributos que no están en las propiedades de lso elemtnos
 
-console.log(title.getAttribute("href")); //retorna null
-console.dir(title.getAttribute("class")); //retorna la clase
+// console.log(title.getAttribute("href")); //retorna null
+// console.dir(title.getAttribute("class")); //retorna la clase
 
-console.dir(title.id = "encabezado")//Atributos ya listados
+// console.dir(title.id = "encabezado")// sobre escribir el id con encabezado
 
 //Agregar atribvtos
 
-title.setAttribute("href", "https://www.google.com");//Agrega un atributo al nodo
+// title.setAttribute("href", "https://www.google.com");//Agrega un atributo al nodo
 
-console.log(title)
+// console.log(title)
+
+// const img = document.querySelector('img');
+const img = document.querySelector('[data-identificador = "img"]');
+img.src = "https://i.blogs.es/ac0bf8/kimetsu/840_560.webp";
+// img.setAttribute("alt", "Kimetsu no yaiba"); //modificar atributos
+
+console.log(img.hasAttribute('alt')) //metodo que devuelve un booleano true si el atributo existe
+
+//luego de hacer setAttribute el atributo queda en el nodo, para eliminarlo se debe hacer:
+
+img.removeAttribute('alt'); //elimina el atributo
+
+console.log(img.attributes)//devuelve los atributos de la imagen
+const figCaption = document.querySelector('figcaption');
+
+const textoMostrar = img.getAttribute('texto-mostrar');
+figCaption.textContent = textoMostrar;
+//Para modificar atributos personalisados
+
+console.log(img.dataset)
+
+figCaption.textContent = img.dataset.textoMostrar; //Lo mismo
+*/ 
