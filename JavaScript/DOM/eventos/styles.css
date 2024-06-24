@@ -1,0 +1,31 @@
+*{
+    margin:0;
+    box-sizing:  border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+[data-id = "wrapper"]{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0;
+    transition: transform .5s;
+}
+
+.title{
+    font-size: 3rem;
+    text-align: center;
+    padding-bottom: 1.5rem;
+    border-bottom:6px solid #ff5e00;
+}
+
+.show{
+    transform: scale(1);
+}
+
+.hide{
+    transform: scale(0);
+}
