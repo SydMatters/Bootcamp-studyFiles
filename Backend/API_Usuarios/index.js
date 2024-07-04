@@ -1,6 +1,7 @@
+console.clear();
 import express from "express";
 import dotenv from "dotenv";
-import { USERS_BBDD } from "./bbdd";
+import { USERS_BBDD } from "./bbdd.js";
 //instalar dotenv
 dotenv.config();
 
@@ -11,7 +12,7 @@ app.use(express.json());
 app.use(express.text());
 
 app.get("/account/:guid", (req, res) => {
-    console.log(req.params);
+    console.log(req.params.guid);
 });
 
 app.post("/account", (req, res) => {});
