@@ -1,8 +1,5 @@
-export const USERS_BBDD = [
-    [
+export const USERS_BBDD =  [
         {
-          "_id": "6685cf6d50f437bde2ffd64e",
-          "index": 0,
           "guid": "50d37d39-20f2-43a9-b418-39f81f050e23",
           "isActive": true,
           "balance": "$1,031.07",
@@ -76,4 +73,3 @@ export const USERS_BBDD = [
           "address": "927 Seagate Avenue, Salunga, North Carolina, 2902"
         }
       ]
-]
