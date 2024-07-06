@@ -1,0 +1,1 @@
+SELECT DISTINCT age FROM users; /*DISTINCT datos distintos, no hay repeticiones*/
