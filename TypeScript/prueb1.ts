@@ -1,26 +1,26 @@
-const persona = {
-  nombre: "Tony",
-  apellido: "Stark",
-  edad: 45,
-};
+// const persona = {
+//   nombre: "Tony",
+//   apellido: "Stark",
+//   edad: 45,
+// };
 
-console.log(persona);
+// console.log(persona);
 
-let texto = "hola";
-//Cuando no sabe inferir un tipo
+// let texto = "hola";
+// //Cuando no sabe inferir un tipo
 
-let a; //?? any cualquiera
-let anyValue: any = "hola"; //ignora el tipado del dato
+// let a; //?? any cualquiera
+// let anyValue: any = "hola"; //ignora el tipado del dato
 
-let unkwonValue: unknown = "hola"; //unknown no se usa mucho, quiere decir que el tipo de dato es desconocido
+// let unkwonValue: unknown = "hola"; //unknown no se usa mucho, quiere decir que el tipo de dato es desconocido
 //unknown es un tipo de dato que no se puede usar en ninguna operacion
 
 //inferencia
-const e = 1;
-const b = 2;
-const c = e + b;
+// const e = 1;
+// const b = 2;
+// const c = e + b;
 
-let cadena = "hola";
+// let cadena = "hola";
 
 //functions
 
@@ -254,23 +254,23 @@ let cadena = "hola";
 
 //Intersectuon types
 
-// type HeroID = `${string}-${string}-${string}-${string}-${string}`
-// type HeroPowerScale = 'low' | 'medium' | 'high' | 'super' | 'godlike' //La escala de poderes de los heroes
-// //puede ser low, medium, high, super, godlike
+type HeroID = `${string}-${string}-${string}-${string}-${string}`
+type HeroPowerScale = 'low' | 'medium' | 'high' | 'super' | 'godlike' //La escala de poderes de los heroes
+//puede ser low, medium, high, super, godlike
 
-// let ann : number | string
-// ann = 2 //Valido
+let ann : number | string
+ann = 2 //Valido
 
-// type HeroBasicInfo = {
-//   name: string,
-//   age: number
+type HeroBasicInfo = {
+  name: string,
+  age: number
 
-// }
-// type HeroProperties = {
-//   readonly id?: HeroID,
-//   isActive?: boolean,
-//   powerScale?: HeroPowerScale
-// }
+}
+type HeroProperties = {
+  readonly id?: HeroID,
+  isActive?: boolean,
+  powerScale?: HeroPowerScale
+}
 
 // type Hero = HeroBasicInfo & HeroProperties //Intersección de tipos parecido a un AND nuevo tipo con dos propiedades
 
@@ -408,5 +408,21 @@ if (canvas1 != null){
 const canvas2 = document.getElementById('canvas')
 if (canvas2 != null && canvas2 instanceof HTMLCanvasElement){
   const ctx = canvas2.getContext('2d') //Type assertion
+
 }
+
+//Mejor forma de hacerlo
+
+const canvas3 = document.getElementById('span')
+if (canvas3 instanceof HTMLCanvasElement){
+  const ctx = canvas3.getContext('2d') //Type assertion
+}
+
+//typeof -> para saber el tipo de dato
+//instanceof -> para saber si es una instancia de una clase
+
+//typeof string, bolean, number, symbol, object, function, undefined
+//instanceof Array, Date, RegExp, Error, HTMLCanvasElement, HTMLDivElement
+
+
 
